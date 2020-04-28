@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/Stylesheet/main.css">
+    <title>Gaano ki Dukan</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="Assets/JavaScript/songs.js"></script>
+    <script src="Assets/JavaScript/model.js"></script>
+    <script src="./Assets/JavaScript/main.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <nav id="main-navigation">
+                        <ul>
+                            <li><input id="search" class="form-control " type="search"
+                                    placeholder="Search for Featured song" aria-label="Search"></li>
+                            <li><a href="#">Featured Songs</a></li>
+                            <li><a href="#">Hindi</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Punjabi</a> </li>
+                            <li> <input id="searchPlaylist" class="form-control " type="search"
+                                    placeholder="Search for Playlist" aria-label="Search"></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9 col-md-9" id="All_songs">
+                    <h2>Featured Songs</h2>
+                    <div class="all_songs">
+                        <ul id="songList" class="anim"></ul>
+                    </div>
+                </div>
+
+                <div class="col col-lg-3 col-md-3" id="Playlist">
+                    <h2>Playlist <button class="btn btn-outline-light my-2 my-sm-0 w-50 btn-dark"
+                            id="save">Save</button></h2>
+                    <div class="playListWrapper">
+                        <ul id="playList" class="anim"></ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div id="music_Player">
+        <div class="container-fluid">
+            <h5 id="curr_head">Current Playing - <span id="curr_song"></span></h5>
+            <div class="row">
+                <div class="col col-lg-1 col-sm-2" id="curr_img">
+                </div>
+                <div class="col-lg-2 col-sm-3" id="button">
+                    <button id="stop" class="btn btn-light"><i class="fas fa-stop"></i></button>
+                    <button id="back" class="btn btn-light"><i class="fas fa-backward"></i></button>
+                    <button id="play" class="btn btn-light"><i class="fas fa-play"></i></button>
+                    <button id="next" class="btn btn-light"><i class="fas fa-forward"></i></button>
+                </div>
+
+                <div class="col col-lg-7 col-sm-5">
+                    <div id="slider">
+                        <span id="sDuration">00:00</span><input type="range" value="0" id="slide">
+                        <span id="lDuration">00:00</span>
+                    </div>
+                </div>
+                <div class="col col-lg-2 col-sm-2" id="sound">
+                    <i id="mutesong" class="fas fa-volume-up text-light"></i>
+                    <input type="range" max="100" value="100" min="0" step="1" id="volume">
+                </div>
+            </div>
+            <audio controls id="audio">
+                <source src="#">
+            </audio>
+        </div>
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
